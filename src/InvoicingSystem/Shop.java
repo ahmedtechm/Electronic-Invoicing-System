@@ -41,6 +41,10 @@ public class Shop {
 	public void setWebSite(String webSite) {
 		WebSite = webSite;
 	}
+	
+	
+	Item item = new Item();
+
 	 
 
 }
