@@ -1,5 +1,7 @@
 package InvoicingSystem;
 
+import java.io.FileOutputStream;
+import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.util.Scanner;
 
@@ -34,8 +36,19 @@ public class Invoice implements Serializable {
         System.out.println("Enter Balance");
         invoice.balance = scan.nextDouble();
         
-		
-
+        try{
+            FileOutputStream file = new FileOutputStream("invoice.txt");
+            ObjectOutputStream out = new ObjectOutputStream(file);
+            out.writeObject(invoice);
+            out.close();
+            file.close();
+            
+            System.out.println("Serialized and saved");
+            
+        	}catch (Exception e){
+        		e.printStackTrace();
+        }
+        
 	}
 
 }

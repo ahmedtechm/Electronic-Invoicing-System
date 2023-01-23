@@ -1,5 +1,7 @@
 package InvoicingSystem;
 
+import java.io.FileOutputStream;
+import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.util.Scanner;
 
@@ -34,7 +36,19 @@ public class Item implements Serializable {
         System.out.println("Enter qty Amount Price");
         item.qtyAmountPrice = scan.nextDouble();
 		
-
+        
+        try{
+            FileOutputStream file = new FileOutputStream("item.txt");
+            ObjectOutputStream out = new ObjectOutputStream(file);
+            out.writeObject(item);
+            out.close();
+            file.close();
+            
+            System.out.println("Serialized and saved");
+            
+        	}catch (Exception e){
+        		e.printStackTrace();
+        }
 	}
 
 }
