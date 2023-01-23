@@ -6,6 +6,7 @@ import java.io.Serializable;
 import java.util.Scanner;
 
 public class Invoice implements Serializable {
+
 	
 	private int invoiceDate;
 	private int numberOfItem;

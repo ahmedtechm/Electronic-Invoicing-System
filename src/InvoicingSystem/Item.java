@@ -1,9 +1,8 @@
 package InvoicingSystem;
 
-import java.io.FileOutputStream;
-import java.io.ObjectOutputStream;
 import java.io.Serializable;
-import java.util.Scanner;
+
+
 
 public class Item implements Serializable {
 	
@@ -14,8 +13,9 @@ public class Item implements Serializable {
 	private double qtyAmountPrice;
 	
 
-	public static void main(String[] args) {
+	//public static void main(String[] args) {
 		
+		Item item = new Item();
 		
 		public int getItemID() {
 			return itemID;
@@ -131,5 +131,5 @@ public class Item implements Serializable {
 //        	}catch (Exception e){
 //        		e.printStackTrace();
 //        }
-	}
+	//}
 }
