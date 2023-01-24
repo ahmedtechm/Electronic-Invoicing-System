@@ -1,7 +1,5 @@
 package InvoicingSystem;
 
-import java.io.FileOutputStream;
-import java.io.ObjectOutputStream;
 import java.io.Serializable;
 
 public class Invoice implements Serializable {
@@ -14,7 +12,7 @@ public class Invoice implements Serializable {
 	private float paidAmount;
 	private float balance;
 	
-	Invoice invoice = new Invoice();
+	Invoice invoiceobj = new Invoice();
 
 	
 	public String getCustomerFullName() {

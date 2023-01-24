@@ -1,7 +1,5 @@
 package InvoicingSystem;
 
-import java.io.FileOutputStream;
-import java.io.ObjectOutputStream;
 import java.io.Serializable;
 
 
@@ -15,7 +13,7 @@ public class Item implements Serializable {
 	private float  qtyAmountPrice;
 	
 	
-	Item item = new Item();
+	Item itemobj = new Item();
 
 	
 	
@@ -64,5 +62,5 @@ public class Item implements Serializable {
 //				e.printStackTrace();
 //		}
 		
-	//Invoice invoice = new Invoice();
+	//Invoice invoiceobj = new Invoice();
 }

@@ -2,20 +2,20 @@ package InvoicingSystem;
 
 public class Shop {
 	
-	private	String name;
+	private	String shopName;
 	private int telephone; 
 	private	String fax;
 	private	String email;
-	private	String WebSite;
+	private	String webSite;
 	
 	
 	
 	
 	public String getName() {
-		return name;
+		return shopName;
 	}
 	public void setName(String name) {
-		this.name = name;
+		this.shopName = name;
 	}
 	public int getTelephone() {
 		return telephone;
@@ -36,10 +36,10 @@ public class Shop {
 		this.email = email;
 	}
 	public String getWebSite() {
-		return WebSite;
+		return webSite;
 	}
 	public void setWebSite(String webSite) {
-		WebSite = webSite;
+		webSite = webSite;
 	}
 	
 	
