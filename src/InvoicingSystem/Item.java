@@ -1,6 +1,7 @@
 package InvoicingSystem;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 
 
 
@@ -13,7 +14,8 @@ public class Item implements Serializable {
 	private float  qtyAmountPrice;
 	
 	
-	Item itemobj = new Item();
+	  ArrayList<Invoice> invoiceList = new ArrayList<Invoice>();
+      Invoice invoiceobj = new Invoice();
 
 	
 	
@@ -61,6 +63,4 @@ public class Item implements Serializable {
 //			}catch (Exception e){
 //				e.printStackTrace();
 //		}
-		
-	//Invoice invoiceobj = new Invoice();
 }

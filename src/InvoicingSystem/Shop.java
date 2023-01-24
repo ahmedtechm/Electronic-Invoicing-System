@@ -1,5 +1,7 @@
 package InvoicingSystem;
 
+import java.util.ArrayList;
+
 public class Shop {
 	
 	private	String shopName;
@@ -9,7 +11,9 @@ public class Shop {
 	private	String webSite;
 	
 	
+	Item itemobj = new Item();
 	
+	ArrayList<Item> itemlist = new ArrayList<Item>();
 	
 	public String getName() {
 		return shopName;
@@ -39,11 +43,9 @@ public class Shop {
 		return webSite;
 	}
 	public void setWebSite(String webSite) {
-		webSite = webSite;
+		this.webSite = webSite;
 	}
 	
-	
-	Item item = new Item();
 
 	 
 

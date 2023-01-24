@@ -12,7 +12,19 @@ public class Invoice implements Serializable {
 	private float paidAmount;
 	private float balance;
 	
-	Invoice invoiceobj = new Invoice();
+
+public void invoiceHeader() {
+		
+	System.out.println("⫸⫸⫸⫸⫸⫸⫸⫸👉  Set Invoice Header 👈⫷⫷⫷⫷⫷⫷⫷⫷"); 
+				       
+						System.out.println("Telephone: 99958431");  
+				        System.out.println("Fax: 23232452"); 
+				        System.out.println("Email: groceryshop@grocery.com");  
+				        System.out.println("Website: www.groceryshop.com");  
+	
+	
+}	
+	
 
 	
 	public String getCustomerFullName() {

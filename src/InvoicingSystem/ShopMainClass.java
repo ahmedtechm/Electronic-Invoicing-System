@@ -1,13 +1,17 @@
 package InvoicingSystem;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class ShopMainClass {
 
 	public static void main(String[] args) {
 		
-	//	Item itemobj = new Item();
-	//	Invoice invoiceobj= new Invoice();
+		ArrayList<Invoice> invoiceList = new ArrayList<Invoice>();
+		
+		Shop shopobj = new Shop();
+		Item itemobj = new Item();
+		Invoice invoiceobj= new Invoice();
 
 	      Scanner scanner = new Scanner(System.in);
 	        boolean exit = false;
@@ -48,18 +52,18 @@ public class ShopMainClass {
 	                            break;
 	                        case 3:
 	                        	 // Set Invoice Header
-	                            System.out.print("Enter new invoice header: ");
+	                            System.out.print("Enter telephone number: ");
 	                            Integer telephone = scanner.nextInt();
-	                            System.out.print("Enter new invoice header: ");
+	                            System.out.print("Enter fax number: ");
 	                            String fax = scanner.next();
-	                            System.out.print("Enter new invoice header: ");
+	                            System.out.print("Enter new email Id: ");
 	                            String email = scanner.next();
-	                            System.out.print("Enter new invoice header: ");
+	                            System.out.print("Enter webSite: ");
 	                            String webSite = scanner.next();
-	                            System.out.println("Invoice header updated to: " + telephone);
-	                            System.out.println("Invoice header updated to: " + fax);
-	                            System.out.println("Invoice header updated to: " + email);
-	                            System.out.println("Invoice header updated to: " + webSite);
+	                            System.out.println("Invoice telephone updated to: " + telephone);
+	                            System.out.println("Invoice fax updated to: " + fax);
+	                            System.out.println("Invoice email updated to: " + email);
+	                            System.out.println("Invoice webSite updated to: " + webSite);
 	                            break;
 	                        case 4:
 	                            break;
