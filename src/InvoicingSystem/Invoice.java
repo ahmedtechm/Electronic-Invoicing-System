@@ -62,20 +62,20 @@ public class Invoice implements Serializable {
 	
 	
 	
-	
-		  try{
-		  FileOutputStream file = new FileOutputStream("invoice.txt");
-		  ObjectOutputStream out = new ObjectOutputStream(file);
-		  out.writeObject(invoice);
-		  out.close();
-		  file.close();
-		  
-		  System.out.println("Serialized and saved");
-		  
-			}catch (Exception e){
-				e.printStackTrace();
-		}
-	
+//	
+//		  try{
+//		  FileOutputStream file = new FileOutputStream("invoice.txt");
+//		  ObjectOutputStream out = new ObjectOutputStream(file);
+//		  out.writeObject(invoice);
+//		  out.close();
+//		  file.close();
+//		  
+//		  System.out.println("Serialized and saved");
+//		  
+//			}catch (Exception e){
+//				e.printStackTrace();
+//		}
+//	
 
 	
 }

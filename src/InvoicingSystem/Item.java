@@ -50,19 +50,19 @@ public class Item implements Serializable {
 		this.qtyAmountPrice = qtyAmountPrice;
 	}
 
-	
-		  try{
-		  FileOutputStream file = new FileOutputStream("item.txt");
-		  ObjectOutputStream out = new ObjectOutputStream(file);
-		  out.writeObject(item);
-		  out.close();
-		  file.close();
-		  
-		  System.out.println("Serialized and saved");
-		  
-			}catch (Exception e){
-				e.printStackTrace();
-		}
+//	
+//		  try{
+//		  FileOutputStream file = new FileOutputStream("item.txt");
+//		  ObjectOutputStream out = new ObjectOutputStream(file);
+//		  out.writeObject(item);
+//		  out.close();
+//		  file.close();
+//		  
+//		  System.out.println("Serialized and saved");
+//		  
+//			}catch (Exception e){
+//				e.printStackTrace();
+//		}
 		
 	//Invoice invoice = new Invoice();
 }
