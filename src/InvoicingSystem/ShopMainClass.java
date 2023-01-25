@@ -1,5 +1,7 @@
 package InvoicingSystem;
 
+import java.io.FileOutputStream;
+import java.io.ObjectOutputStream;
 import java.util.Scanner;
 
 public class ShopMainClass {
@@ -17,7 +19,7 @@ public class ShopMainClass {
 	        boolean exit = false;
 	        while (!exit) {
 	        	
-	        	
+	        	// Main menu 
 	        	System.out.println("⫸⫸⫸⫸⫸⫸⫸⫸👉 Welcome to Groceries Shop System 👈⫷⫷⫷⫷⫷⫷⫷⫷");
 	            System.out.println("\n1- Shop Settings");
 	            System.out.println("2- Manage Shop Items");
@@ -51,7 +53,6 @@ public class ShopMainClass {
 	                            System.out.println("Enter shop name:");
 	            				String shopName = scanner.next();
 	            				invoiceobj.shopobj.setName(shopName);
-	                            
 	                            
 	                            System.out.println("Shop name saved : " + shopName);
 	                            break;
@@ -95,11 +96,47 @@ public class ShopMainClass {
 	                    switch (subChoice) {
 	                        case 1:
 	                        	// Add Items
+	                        	
+	                        	Item itemobj = new Item();
+	                        	
+	                        	System.out.print("Enter item ID: ");
+	                        	Integer itemID = scanner.nextInt();
+	                            invoiceobj.shopobj.itemobj.setItemID(itemID);
+	                        	                                              	
 	                            System.out.print("Enter item name: ");
 	                            String itemName = scanner.next();
+	                            invoiceobj.shopobj.itemobj.setItemName(itemName);
+	                            
 	                            System.out.print("Enter item price: ");
 	                            float itemPrice = scanner.nextFloat();
-	                            System.out.println(itemName + " added to items list with price: " + itemPrice);
+	                            invoiceobj.shopobj.itemobj.setItemPrice(itemPrice);
+	                            
+	                            System.out.print("Enter Item Quantity: ");
+	                        	Integer itemQuantity = scanner.nextInt();
+	                            invoiceobj.shopobj.itemobj.setItemQuantity(itemQuantity);
+	                            
+	                            System.out.print("Enter qty Amount Price: ");
+	                            float qtyAmountPrice = scanner.nextFloat();
+	                            invoiceobj.shopobj.itemobj.setQtyAmountPrice(qtyAmountPrice);
+	                            
+	                        	
+	                  		  try{
+	                  		  FileOutputStream file = new FileOutputStream("itemSerialized.txt");
+	                  		  ObjectOutputStream out = new ObjectOutputStream(file);
+	                  		  out.writeObject(itemobj);
+	                  		  out.close();
+	                  		  file.close();
+	                  		  
+	                  		  System.out.println("Serialized and saved");
+	                  		  
+                  			}catch (Exception e){
+	                  				e.printStackTrace();
+	                  		}
+	                            
+	                            
+	                            
+	                            
+	                            
 	                            break;
 	                        case 2:
 	                        	 // Delete Items
