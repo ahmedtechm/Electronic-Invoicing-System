@@ -13,7 +13,7 @@ public class Shop {
 	
 	Item itemobj = new Item();
 	
-	ArrayList<Item> itemlist = new ArrayList<Item>();
+	//ArrayList<Item> itemlist = new ArrayList<Item>();
 	
 	public String getName() {
 		return shopName;

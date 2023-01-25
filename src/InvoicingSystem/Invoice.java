@@ -12,6 +12,9 @@ public class Invoice implements Serializable {
 	private float paidAmount;
 	private float balance;
 	
+	
+//ArrayList<Item> itemsList = new ArrayList<Item>();
+	
 
 public void invoiceHeader() {
 		
@@ -26,7 +29,6 @@ public void invoiceHeader() {
 }	
 	
 
-	
 	public String getCustomerFullName() {
 		return customerFullName;
 	}
@@ -71,7 +73,7 @@ public void invoiceHeader() {
 	}
 	
 	
-	
+	     Shop shopobj = new Shop();
 //	
 //		  try{
 //		  FileOutputStream file = new FileOutputStream("invoice.txt");

@@ -1,22 +1,25 @@
 package InvoicingSystem;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class ShopMainClass {
 
 	public static void main(String[] args) {
 		
-		ArrayList<Invoice> invoiceList = new ArrayList<Invoice>();
+		//ArrayList<Invoice> invoiceList = new ArrayList<Invoice>();
+		//ArrayList <Item> itemList=new ArrayList<Item>();
 		
-		Shop shopobj = new Shop();
-		Item itemobj = new Item();
+		//Shop shopobj = new Shop();
+		//Item itemobj = new Item();
 		Invoice invoiceobj= new Invoice();
 
 	      Scanner scanner = new Scanner(System.in);
 	        boolean exit = false;
 	        while (!exit) {
-	            System.out.println("1- Shop Settings");
+	        	
+	        	
+	        	System.out.println("⫸⫸⫸⫸⫸⫸⫸⫸👉 Welcome to Groceries Shop System 👈⫷⫷⫷⫷⫷⫷⫷⫷");
+	            System.out.println("\n1- Shop Settings");
 	            System.out.println("2- Manage Shop Items");
 	            System.out.println("3- Create New Invoice");
 	            System.out.println("4- Report: Statistics");
@@ -40,30 +43,40 @@ public class ShopMainClass {
 	                        	 // Load Data (Items and invoices)
 	                            System.out.println("Loading data...");
 	                            
-	                            
-	                            
+
 	                            break;
 	                           
 	                        case 2:
-	                            // Set Shop Name
-	                            System.out.print("Enter shop name: ");
-	                            String shopName = scanner.next();
+	                            // Set Shop Name 
+	                            System.out.println("Enter shop name:");
+	            				String shopName = scanner.next();
+	            				invoiceobj.shopobj.setName(shopName);
+	                            
+	                            
 	                            System.out.println("Shop name saved : " + shopName);
 	                            break;
 	                        case 3:
 	                        	 // Set Invoice Header
 	                            System.out.print("Enter telephone number: ");
-	                            Integer telephone = scanner.nextInt();
-	                            System.out.print("Enter fax number: ");
+	                            Integer telephone = scanner.nextInt();	              
+	            				invoiceobj.shopobj.setTelephone(telephone);                                                     
+	                            
+	            				System.out.print("Enter fax number: ");
 	                            String fax = scanner.next();
+	                            invoiceobj.shopobj.setFax(fax);	                                                      
+	                            
 	                            System.out.print("Enter new email Id: ");
 	                            String email = scanner.next();
+	                            invoiceobj.shopobj.setEmail(email);	                       
+	                            
 	                            System.out.print("Enter webSite: ");
 	                            String webSite = scanner.next();
-	                            System.out.println("Invoice telephone updated to: " + telephone);
-	                            System.out.println("Invoice fax updated to: " + fax);
-	                            System.out.println("Invoice email updated to: " + email);
-	                            System.out.println("Invoice webSite updated to: " + webSite);
+	                            invoiceobj.shopobj.setWebSite(webSite);
+	  
+	                            System.out.println("Invoice telephone saved : " + telephone);
+	                            System.out.println("Invoice fax saved : " + fax);
+	                            System.out.println("Invoice email saved : " + email);
+	                            System.out.println("Invoice webSite saved: " + webSite);
 	                            break;
 	                        case 4:
 	                            break;
