@@ -140,9 +140,9 @@ public class ShopMainClass {
 	                            break;
 	                        case 2:
 	                        	 // Delete Items
-	                            System.out.print("Enter item name: ");
-	                            itemName = scanner.next();
-	                            System.out.println(itemName + " has been deleted from the items list.");
+	                            System.out.print("Enter item ID: ");
+	                            itemID = scanner.nextInt();
+	                            System.out.println(itemID + " has been deleted from the items list.");
 	                            break;
 	                        case 3:
 	                            // Change Item Price
@@ -158,6 +158,53 @@ public class ShopMainClass {
 	                    break;
 	                case 3:
 	                    // Create New Invoice
+	                
+	                	Invoice invoice= new Invoice();
+	                	
+	                	System.out.print("Enter Customer Full Name : ");
+                        String customerFullName = scanner.next();
+                        invoiceobj.setCustomerFullName(customerFullName);
+                        
+                        System.out.print("Enter Customer Phone Number : ");
+                    	Integer phoneNumber = scanner.nextInt();
+                        invoiceobj.setPhoneNumber(phoneNumber);
+                        
+                        System.out.print("Enter Invoice Date : ");
+                    	Integer invoiceDate = scanner.nextInt();
+                        invoiceobj.setInvoiceDate(invoiceDate);
+                        
+                        System.out.print("Enter Number of Item : ");
+                    	Integer numberOfItem = scanner.nextInt();
+                        invoiceobj.setNumberOfItem(numberOfItem);
+                        
+                        System.out.print("Enter Total Amount : ");
+                        float totalAmount = scanner.nextFloat();
+                        invoiceobj.setTotalAmount(totalAmount);
+                        
+                        System.out.print("Enter Paid Amount : ");
+                        float paidAmount = scanner.nextFloat();
+                        invoiceobj.setPaidAmount(paidAmount);
+                        
+                        System.out.print("Enter Balance : ");
+                        float balance = scanner.nextFloat();
+                        invoiceobj.setBalance(balance);
+	                	
+                    	
+              		  try{
+              		  FileOutputStream file = new FileOutputStream("invoiceSerialization.txt");
+              		  ObjectOutputStream out = new ObjectOutputStream(file);
+              		  out.writeObject(invoice);
+              		  out.close();
+              		  file.close();
+              		  
+              		  System.out.println("Serialized and saved");
+              		  
+              			}catch (Exception e){
+              				e.printStackTrace();
+              		}
+	                	
+
+	                	
 	                    break;
 	                case 4:
 	                    // Report: Statistics
