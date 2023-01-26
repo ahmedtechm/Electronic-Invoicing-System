@@ -2,6 +2,7 @@ package InvoicingSystem;
 
 import java.io.FileOutputStream;
 import java.io.ObjectOutputStream;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class ShopMainClass {
@@ -10,6 +11,7 @@ public class ShopMainClass {
 		
 		//ArrayList<Invoice> invoiceList = new ArrayList<Invoice>();
 		//ArrayList <Item> itemList=new ArrayList<Item>();
+		ArrayList<Item> itemList = new ArrayList<Item>();
 		
 		//Shop shopobj = new Shop();
 		//Item itemobj = new Item();
@@ -118,6 +120,8 @@ public class ShopMainClass {
 	                            System.out.print("Enter qty Amount Price: ");
 	                            float qtyAmountPrice = scanner.nextFloat();
 	                            invoiceobj.shopobj.itemobj.setQtyAmountPrice(qtyAmountPrice);
+	                            
+	                            itemList.add(itemobj);
 	                            
 	                        	
 	                  		  try{
