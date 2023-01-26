@@ -14,8 +14,8 @@ public class ShopMainClass {
 		//Shop shopobj = new Shop();
 		//Item itemobj = new Item();
 		Invoice invoiceobj= new Invoice();
-
-	      Scanner scanner = new Scanner(System.in);
+			Scanner scan = new Scanner(System.in).useDelimiter("\n");
+			Scanner scanner = new Scanner(System.in);
 	        boolean exit = false;
 	        while (!exit) {
 	        	
@@ -162,7 +162,7 @@ public class ShopMainClass {
 	                	Invoice invoice= new Invoice();
 	                	
 	                	System.out.print("Enter Customer Full Name : ");
-                        String customerFullName = scanner.next();
+                        String customerFullName = scan.next();
                         invoiceobj.setCustomerFullName(customerFullName);
                         
                         System.out.print("Enter Customer Phone Number : ");
